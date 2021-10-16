@@ -1,0 +1,75 @@
+https://spark.apache.org/
+https://spark.apache.org/docs/latest/sql-programming-guide.html
+
+
+## What is Big Data?
+- Data 0-32 GB or 64 GB RAM is not big data
+- for larger set of data:
+  sql database to move to hard drive instead of RAM
+  or, use a distributed systems - distribute data to multiple machines/computer connected through a n/w
+
+# Distrubuted systems
+- scaling is easy - just add more machines to distrubuted systems
+- fault tolerance
+
+# Hadoop
+- distribute very large files across multiple machines
+- uses Hadoop Distributed File System (HDFS)
+- work wth large data sets
+- duplicates / replicates data
+- uses MapReduce - allows computations on that data
+
+                     ---- Data Node <CPU|RAM>
+Name Node <CPU|RAM>  ---- Data Node <CPU|RAM>
+                     ---- Data Node <CPU|RAM>
+
+# HDFS
+- use blocks of data - 128 MB default
+- replicated 3 times to support fault tolerance
+- smaller blocks provide more parallelization during processing
+
+# MapReduce
+- splitting a computational task to a distributed set of files (like HDFS)
+- consists of a Job Tracker and multiple Task Trackers
+- Job Tracker sends code to run on the Task Trackers
+- Task Trackers allocate CPU and memory for the tasks and monitor the tasks on the worker nodes
+
+------ Using HDFS to distribute large data sets
+------ Using MapReduce to distribute a computational task to a distributed data set
+
+
+## Spark
+- flexible alternative to MapReduce
+- can use data stored in different formats like:
+  Cassandra
+  AWS S3
+  HDFS
+  and more...
+
+# Spark vs MapReduce
+- MapReduce requires files to be stored in HDFS
+- Spark is 100x faster
+- MapReduce writes most data to disk after each map and reduce operation
+- Spark keeps most of the data in memory after each transformation
+- Spark can spill over to disk if the memory is filled
+
+# Spark RDDs
+- idea of a Resilient Distributed Dataset (RDD)
+- RDD has 4 main features:
+  Distributed collection of data
+  Fault-tolerant
+  Parallel operation - partitioned
+  Ability to use man data sources
+- RDDs are immutable, lazily evaluated, cacheable
+- 2 types of Spark operations:
+  Transformations: basically a recipe to follow
+  Actions: perform what the recipe says to do and returns something back
+- latest version is moving towards a DataFrame based syntax, but the idea is based on RDD only
+
+
+
+
+
+
+
+
