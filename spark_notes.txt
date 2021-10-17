@@ -67,6 +67,21 @@ Name Node <CPU|RAM>  ---- Data Node <CPU|RAM>
 - latest version is moving towards a DataFrame based syntax, but the idea is based on RDD only
 
 
+## Installation - Python and Spark
+- only works on Linux
+- 4 methods to setup:
+  Ubuntu + Spark + Python on VirtualBox
+  Amazon EC2 with Python and Spark
+  Databricks Notebook System
+  AWS EMR Notebook (not free!)
+
+# Databricks Notebook System
+- free community version that supports a 15GB cluster
+- own storage format known as DBFS
+- this table format needs to be accessed in a particular way
+- link - Cy32th@abc
+https://databricks.com/try-databricks
+
 
 
 
