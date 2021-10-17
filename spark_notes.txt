@@ -67,7 +67,9 @@ Name Node <CPU|RAM>  ---- Data Node <CPU|RAM>
 - latest version is moving towards a DataFrame based syntax, but the idea is based on RDD only
 
 
-## Installation - Python and Spark
+##################################
+# Installation - Python and Spark
+##################################
 - only works on Linux
 - 4 methods to setup:
   Ubuntu + Spark + Python on VirtualBox
@@ -75,7 +77,7 @@ Name Node <CPU|RAM>  ---- Data Node <CPU|RAM>
   Databricks Notebook System
   AWS EMR Notebook (not free!)
 
-# Databricks Notebook System
+## Databricks Notebook System
 - free community version that supports a 15GB cluster
 - own storage format known as DBFS
 - this table format needs to be accessed in a particular way
@@ -84,7 +86,45 @@ https://databricks.com/try-databricks
 
 
 
+######################
+# Python crash course
+######################
 
+## Jupyter notebook
+- when type object variable - use <dot(.) and Tab> to look for all methods
+- for any function - use <Shift + Tab> to look for Docstring
+- in markdown - use multiple '#' to increase or decrease the heading
+
+## Crash Course 1
+- type(1.0)
+float
+
+- string can be single quote or double quote - however, python displays it as single quote for both
+
+# append vs extend - list
+- mylist.append('something') - to add an item to a list
+>>> my_list
+['foo', 'bar', 'baz']
+>>> another_list = [1, 2, 3]
+>>> my_list.append(another_list)
+>>> my_list
+['foo', 'bar', 'baz', [1, 2, 3]]
+                     #^^^^^^^^^--- single item at the end of the list.
+
+- mylist.extend([1,2,3]) will add each item individually
+>>> my_list
+['foo', 'bar']
+>>> another_list = [1, 2, 3]
+>>> my_list.extend(another_list)
+>>> my_list
+['foo', 'bar', 1, 2, 3]
+
+
+- a dictionary: d = {'k1':'v1', 'k2':'v2'}
+- no order maintained - same as Java HashMap
+- 0 is False and non-zero is True
+- a tuple: tup = (1,2,3)
+- a set: myset = {1,2,3}
 
 
 
