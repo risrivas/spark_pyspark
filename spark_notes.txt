@@ -90,6 +90,15 @@ https://databricks.com/try-databricks
 # Python crash course
 ######################
 
+## setup Visual code for python
+- install extensions:
+Python Intellisense(Pylance), Lint.....
+Python Docstring Generator
+
+- Command Palette -> Linter -> Select Python Linter -> pylint
+
+
+
 ## Jupyter notebook
 - when type object variable - use <dot(.) and Tab> to look for all methods
 - for any function - use <Shift + Tab> to look for Docstring
