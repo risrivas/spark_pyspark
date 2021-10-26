@@ -175,4 +175,24 @@ for x in range(5):
 [ x**2 for x in range(5) ]
 
 
+## Crash course 3
+
+- function
+def my_func(name='no name'):
+  print('hello ' + name)
+
+def square(x):
+  return x**2
+
+- lambda
+lambda var: var*2
+
+- split
+tweet = 'Hello #sports'
+tweet.split('#')
+
+- in
+'x' in [1,2,3]
+False
+
 
