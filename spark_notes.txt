@@ -195,4 +195,13 @@ tweet.split('#')
 'x' in [1,2,3]
 False
 
+## Assignment
+- Python has str.__contains__() method similar to Java string contains()
+- could use 'in' instead of contains
+return 'dog' in st.lower()
+- can use shortcut
+count = count + 1
+count += 1
+
+
 
