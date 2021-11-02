@@ -84,6 +84,7 @@ Name Node <CPU|RAM>  ---- Data Node <CPU|RAM>
 - own storage format known as DBFS
 - this table format needs to be accessed in a particular way
 - link - Cy32th@abc
+https://community.cloud.databricks.com/
 https://databricks.com/try-databricks
 
 
@@ -104,6 +105,7 @@ Python Docstring Generator
 - when type object variable - use <dot(.) and Tab> to look for all methods
 - for any function - use <Shift + Tab> to look for Docstring
 - in markdown - use multiple '#' to increase or decrease the heading
+- to open a particular notebook in a folder, cd to that folder and type "jupyter notebook"
 
 
 ## Crash Course 1
@@ -204,4 +206,16 @@ count = count + 1
 count += 1
 
 
+#########################
+# Spark Dataframe Basics
+#########################
+(Using Databricks)
 
+- first get the 'spark' object
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName('Basics').getOrCreate()
+
+- load a file from local machine
+df = spark.read.format("json").load("dbfs:/FileStore/shared_uploads/rishisrivasta@gmail.com/people.json")
+
+- can change the schema as given in the notebook
