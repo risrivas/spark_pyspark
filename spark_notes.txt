@@ -87,6 +87,8 @@ Name Node <CPU|RAM>  ---- Data Node <CPU|RAM>
 https://community.cloud.databricks.com/
 https://databricks.com/try-databricks
 
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4447638499762654/1922889120291604/2622598034095304/latest.html
+
 
 
 ######################
@@ -219,3 +221,6 @@ spark = SparkSession.builder.appName('Basics').getOrCreate()
 df = spark.read.format("json").load("dbfs:/FileStore/shared_uploads/rishisrivasta@gmail.com/people.json")
 
 - can change the schema as given in the notebook
+
+---- most of the details are given in the notebook which is self explanatory ----
+
