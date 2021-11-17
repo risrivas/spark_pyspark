@@ -213,6 +213,7 @@ count += 1
 #########################
 (Using Databricks)
 
+# part 1
 - first get the 'spark' object
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName('Basics').getOrCreate()
@@ -223,4 +224,30 @@ df = spark.read.format("json").load("dbfs:/FileStore/shared_uploads/rishisrivast
 - can change the schema as given in the notebook
 
 ---- most of the details are given in the notebook which is self explanatory ----
+
+
+# part 2
+- can convert df into a temp view where SQL can be used
+example:
+df.createOrReplaceTempView('people')
+results = spark.sql("SELECT * FROM people")
+results.show()
+
+
+# part 3
+dbfs:/FileStore/shared_uploads/rishisrivasta@gmail.com/appl_stock.csv
+df1 = spark.read.format("csv").option("header", "true").load("dbfs:/FileStore/shared_uploads/rishisrivasta@gmail.com/appl_stock.csv")
+
+- can filter rows
+df1.filter(df1['Close'] < 500).show()
+df1.filter(df1['Close'] < 500).select(['Date', 'Volume']).show()
+df1.filter( (df1['Close'] < 200) & (df1['Open'] > 200) ).show()
+
+- can save the result of a query
+result = df1.filter(df1['Low'] == 197.16).collect()
+
+
+# part 4 - group by and aggregate
+
+
 
